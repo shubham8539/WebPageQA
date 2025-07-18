@@ -8,7 +8,9 @@ from langchain_community.document_loaders import WebBaseLoader
 
 # ------------------ Load Environment ------------------
 load_dotenv()
-st.secrets["OPENAI_API_KEY"]
+if "OPENAI_API_KEY" in st.secrets:
+    os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
+
 
 # ------------------ LLM Setup ------------------
 model = ChatOpenAI()
