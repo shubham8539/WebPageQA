@@ -27,7 +27,6 @@ scikit-learn
 
 #UI
 streamlit
-os
 langchain>=0.1.13
 langchain-openai>=0.1.5
 langchain-community>=0.0.16
